@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Segoe UI", sans-serif;
+  --color-clin-green: #159c84;
+  --color-clin-green-dark: #0f7b68;
+  --color-clin-blue: #237c90;
+  --color-clin-blue-dark: #1a5d6c;
+  --color-ink: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #0f172a;
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 75% 7%, rgba(45, 212, 191, 0.34) 0%, rgba(45, 212, 191, 0.16) 29%, transparent 55%),
+    radial-gradient(circle at 9% 18%, rgba(14, 165, 233, 0.22) 0%, rgba(14, 165, 233, 0.1) 32%, transparent 62%),
+    linear-gradient(135deg, #ecfeff 0%, #f0fdf4 42%, #e0f2fe 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(15, 118, 110, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 118, 110, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.78), transparent 78%);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-clin-green to-clin-blue bg-clip-text text-transparent;
+  }
+
+  .panel {
+    @apply rounded-lg border border-white/80 bg-white/90 shadow-[0_24px_70px_rgba(15,118,110,0.14),0_1px_3px_rgba(15,23,42,0.04)] backdrop-blur;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-clin-green to-clin-blue px-5 py-3 text-sm font-bold text-white shadow-xl shadow-teal-900/20 transition hover:-translate-y-0.5 hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-clin-green/20;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-clin-green/45 bg-white/80 px-5 py-3 text-sm font-bold text-clin-green shadow-sm transition hover:-translate-y-0.5 hover:bg-cyan-50 focus:outline-none focus:ring-4 focus:ring-clin-green/15;
+  }
+
+  .btn-small {
+    @apply px-4 py-2 text-xs;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-clin-green focus:ring-4 focus:ring-clin-green/10;
+  }
+
+  .form-label {
+    @apply mb-2 block text-sm font-semibold text-slate-700;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-xs font-bold;
+  }
+
+  .alert-success {
+    @apply rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700;
+  }
+
+  .alert-error {
+    @apply rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.35s ease-out both;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.mask-fade {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* ─── Rich Text Editor (Admin) ─── */
+.rich-editor-wrapper {
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.rich-editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  padding: 0.45rem;
+}
+
+.rich-editor-tool,
+.rich-editor-color,
+.rich-editor-select {
+  display: inline-flex;
+  min-height: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: 0.4rem;
+  border: 1px solid #cbd5e1;
+  background: white;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #334155;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.rich-editor-tool:hover,
+.rich-editor-color:hover,
+.rich-editor-select:hover {
+  border-color: #159c84;
+  color: #0f766e;
+}
+
+.rich-editor-select {
+  cursor: pointer;
+}
+
+.rich-editor-color input {
+  height: 1.25rem;
+  width: 1.5rem;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.rich-editor-input {
+  min-height: 8rem;
+  overflow-y: auto;
+  background: white;
+  padding: 0.85rem 1rem;
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.rich-editor-input:focus {
+  outline: none;
+}
+
+.rich-editor-wrapper:focus-within {
+  border-color: #159c84;
+  box-shadow: 0 0 0 4px rgba(21, 156, 132, 0.1);
+}
+
+.course-rich-cell {
+  display: inline;
+}
+
+.course-rich-inline {
+  display: inline;
+}
+
+.course-rich-cell p,
+.course-rich-inline p {
+  display: inline;
+  margin: 0;
+}
+
+/* ─── Rich Text Content Display (Public pages) ─── */
+.rich-text-content strong,
+.rich-text-content b {
+  font-weight: 700;
+}
+
+.rich-text-content em,
+.rich-text-content i {
+  font-style: italic;
+}
+
+.rich-text-content u {
+  text-decoration: underline;
+}
+
+.rich-text-content a {
+  color: #237c90;
+  text-decoration: underline;
+}
+
+.rich-text-content a:hover {
+  color: #159c84;
+}
+
+.rich-text-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.rich-text-content ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.rich-text-content li {
+  margin: 0.25rem 0;
+}
+
+.rich-text-content p {
+  margin: 0;
+}
