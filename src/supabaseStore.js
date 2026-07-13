@@ -68,7 +68,7 @@ export async function uploadFileToStorage(file, folder = "uploads") {
   const timestamp = Date.now();
   const safeName = file.name.replace(/[^a-zA-Z0-9.\-_]/g, "_");
   const filePath = `${folder}/${timestamp}_${safeName}`;
-  
+
   const formData = new FormData();
   formData.append("file", file);
   formData.append("filePath", filePath);
@@ -103,13 +103,13 @@ export async function uploadTeamPicture(imageFile, memberName) {
   if (!imageFile.type.startsWith("image/")) {
     throw new Error("File must be an image (jpg, png, gif, etc.)");
   }
-  
+
   const timestamp = Date.now();
   const safeName = memberName.replace(/[^a-zA-Z0-9.\-_]/g, "_");
   const extension = imageFile.name.split(".").pop();
   const fileName = `${safeName}_${timestamp}.${extension}`;
   const filePath = `team-pictures/${fileName}`;
-  
+
   const formData = new FormData();
   formData.append("file", imageFile);
   formData.append("filePath", filePath);
@@ -125,7 +125,7 @@ export async function uploadTeamPicture(imageFile, memberName) {
     }
 
     const data = await response.json();
-    
+
     return {
       publicUrl: data.publicUrl,
       fileName: fileName,
@@ -148,7 +148,7 @@ export async function getTeamPictures() {
       throw new Error(`Failed to list files: ${response.status}`);
     }
     const data = await response.json();
-    
+
     return data.map(file => ({
       fileName: file.name,
       filePath: `team-pictures/${file.name}`,
@@ -193,12 +193,12 @@ export async function uploadCoursePDF(pdfFile, courseName) {
   if (pdfFile.type !== "application/pdf") {
     throw new Error("File must be a PDF");
   }
-  
+
   const timestamp = Date.now();
   const safeName = courseName.replace(/[^a-zA-Z0-9.\-_]/g, "_");
   const fileName = `${safeName}_${timestamp}.pdf`;
   const filePath = `course-pdfs/${fileName}`;
-  
+
   const formData = new FormData();
   formData.append("file", pdfFile);
   formData.append("filePath", filePath);
@@ -237,7 +237,7 @@ export async function getCoursePDFs() {
       throw new Error(`Failed to list files: ${response.status}`);
     }
     const data = await response.json();
-    
+
     return data.map(file => ({
       fileName: file.name,
       filePath: `course-pdfs/${file.name}`,
