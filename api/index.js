@@ -1,10 +1,11 @@
-import express from "express";
-import pg from "pg";
-import multer from "multer";
-import cors from "cors";
-import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+import fs from "fs";
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const { Pool } = pg;
 
@@ -15,13 +16,13 @@ app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
-// Configure connection pool with optional SSL for remote databases
+// Configure connection pool (SSL enabled only if explicitly configured via DATABASE_SSL=true or sslmode=require)
 const connectionString = process.env.DATABASE_URL;
-const isLocal = !connectionString || connectionString.includes("localhost") || connectionString.includes("127.0.0.1");
+const useSsl = process.env.DATABASE_SSL === "true" || (connectionString && connectionString.includes("sslmode=require"));
 
 const pool = new Pool({
   connectionString,
-  ssl: isLocal ? false : { rejectUnauthorized: false }
+  ssl: useSsl ? { rejectUnauthorized: false } : false
 });
 
 // Database Initialization
@@ -210,11 +211,21 @@ app.get("/api/health", async (req, res) => {
   }
 });
 
-// Run server locally
+// Serve static assets if dist folder exists (e.g. Hostinger VPS / production environment)
+const distPath = path.resolve(__dirname, "../dist");
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get("*", (req, res, next) => {
+    if (req.path.startsWith("/api")) return next();
+    res.sendFile(path.join(distPath, "index.html"));
+  });
+}
+
+// Run server
 if (!process.env.VERCEL) {
   const PORT = process.env.PORT || 5001;
   app.listen(PORT, () => {
-    console.log(`Server running locally on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
   });
 }
 
