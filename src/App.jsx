@@ -7,7 +7,7 @@ import {
   readJson,
   mergeSiteContent,
 } from "./data/defaultData";
-import { storageEnabled, loadSiteState, saveSiteState } from "./supabaseStore";
+import { storageEnabled, loadSiteState, saveSiteState } from "./postgresStore";
 
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";

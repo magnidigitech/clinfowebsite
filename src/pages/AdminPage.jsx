@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import * as XLSX from "xlsx";
 import { storageKeys, defaultSiteContent } from "../data/defaultData";
-import { storageEnabled, uploadFileToStorage, uploadCoursePDF, deleteCoursePDF } from "../supabaseStore";
+import { storageEnabled, uploadFileToStorage, uploadCoursePDF, deleteCoursePDF } from "../postgresStore";
 import { Logo } from "../components/Logo";
 import { TextField } from "../components/TextField";
 import { RichTextDisplay } from "../components/RichTextDisplay";
