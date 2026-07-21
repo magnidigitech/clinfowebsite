@@ -10,9 +10,6 @@ export function AffiliatedInstitutesPage({ affiliatedInstitutes, content }) {
   return (
     <section className="fade-up">
       <SectionHeader title={content?.affiliatedTitle || "Our Affiliated Institutes"} subtitle={content?.affiliatedSubtitle || "Partners committed to advancing clinical education and training through Memorandum of Understanding (MOU) agreements."} />
-      <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-900">
-        <p>🤝 <RichTextDisplay html={content?.affiliatedText || "All institutes listed below have formal MOU agreements with Clinformatiq for collaborative clinical training and professional development."} className="inline" /></p>
-      </div>
 
       {institutes.length === 0 ? (
         <div className="panel p-10 text-center text-slate-500">The affiliated institutes list is currently being updated.</div>
