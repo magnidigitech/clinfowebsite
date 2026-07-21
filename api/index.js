@@ -25,6 +25,10 @@ const pool = new Pool({
   ssl: useSsl ? { rejectUnauthorized: false } : false
 });
 
+pool.on("error", (err) => {
+  console.error("[PostgreSQL Pool Error]", err.message);
+});
+
 // Database Initialization
 async function initDb() {
   if (!connectionString) {
@@ -214,17 +218,20 @@ app.get("/api/health", async (req, res) => {
 // Serve static assets if dist folder exists (e.g. Hostinger VPS / production environment)
 const distPath = path.resolve(__dirname, "../dist");
 if (fs.existsSync(distPath)) {
+  console.log(`[Express] ✓ Serving static production build from: ${distPath}`);
   app.use(express.static(distPath));
   app.get("*", (req, res, next) => {
     if (req.path.startsWith("/api")) return next();
     res.sendFile(path.join(distPath, "index.html"));
   });
+} else {
+  console.warn(`[Express] ⚠️ Warning: ${distPath} does not exist. Run 'npm run build' first.`);
 }
 
 // Run server
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`✓ Server listening on 0.0.0.0:${PORT}`);
 });
 
 export default app;
