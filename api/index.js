@@ -63,12 +63,18 @@ async function initDb() {
       `);
       console.log("✓ PostgreSQL tables initialized successfully.");
 
-      // Automatically seed initial site dataset if table is empty or FORCE_SEED=true
-      const { rows } = await client.query("SELECT COUNT(*) FROM site_state");
-      const isEmpty = parseInt(rows[0].count, 10) === 0;
-      const forceSeed = process.env.FORCE_SEED === "true";
+      // Automatically seed initial site dataset if table is empty, incomplete, or FORCE_SEED=true
+      const { rows } = await client.query("SELECT data FROM site_state WHERE id = 1");
+      const existingData = rows.length > 0 ? rows[0].data : null;
+      const needsSeed =
+        !existingData ||
+        !existingData.teamMembers ||
+        existingData.teamMembers.length === 0 ||
+        !existingData.courses ||
+        existingData.courses.length < 5 ||
+        process.env.FORCE_SEED === "true";
 
-      if (isEmpty || forceSeed) {
+      if (needsSeed) {
         const seedPath = path.resolve(__dirname, "../initial_seed.json");
         if (fs.existsSync(seedPath)) {
           const seedData = fs.readFileSync(seedPath, "utf-8");
