@@ -35,15 +35,23 @@ export async function loadSiteState() {
   }
 }
 
-// Save website state to API
-export async function saveSiteState(state) {
+// Save website state to API (supports both full state object and key/value updates)
+export async function saveSiteState(keyOrState, value) {
   try {
+    let stateToSave;
+    if (typeof keyOrState === "string") {
+      const currentState = (await loadSiteState()) || {};
+      stateToSave = { ...currentState, [keyOrState]: value };
+    } else {
+      stateToSave = keyOrState;
+    }
+
     const response = await fetch("/api/state", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(state),
+      body: JSON.stringify(stateToSave),
     });
 
     if (!response.ok) {
@@ -51,7 +59,7 @@ export async function saveSiteState(state) {
     }
 
     console.log("[PostgreSQL] ✓ Site state saved successfully");
-    return state;
+    return stateToSave;
   } catch (error) {
     console.error("[PostgreSQL] ✗ SAVE FAILED:", error);
     throw new Error("Unable to save site state.");
