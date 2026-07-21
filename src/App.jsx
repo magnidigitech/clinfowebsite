@@ -61,55 +61,63 @@ export function App() {
   const [directors, setDirectors] = useState(() => readJson("clinformatiq_web_directors", []));
   const [certificates, setCertificates] = useState(() => readJson("clinformatiq_web_certificates", []));
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     if (!storageEnabled) return;
     loadSiteState()
       .then((data) => {
-        if (data.siteContent) setSiteContent(mergeSiteContent(data.siteContent));
-        if (data.teamMembers) setTeamMembers(data.teamMembers);
-        if (data.directors) setDirectors(data.directors);
-        if (data.careerListings) setCareerListings(data.careerListings);
-        if (data.documents) setDocuments(data.documents);
-        if (data.affiliatedInstitutes) setAffiliatedInstitutes(data.affiliatedInstitutes);
-        if (data.certificates) setCertificates(data.certificates);
+        if (data) {
+          if (data.siteContent) setSiteContent(mergeSiteContent(data.siteContent));
+          if (data.teamMembers) setTeamMembers(data.teamMembers);
+          if (data.directors) setDirectors(data.directors);
+          if (data.careerListings) setCareerListings(data.careerListings);
+          if (data.documents) setDocuments(data.documents);
+          if (data.affiliatedInstitutes) setAffiliatedInstitutes(data.affiliatedInstitutes);
+          if (data.certificates) setCertificates(data.certificates);
+        }
+        setIsLoaded(true);
       })
-      .catch((err) => console.error("Error loading state from PostgreSQL:", err));
+      .catch((err) => {
+        console.error("Error loading state from PostgreSQL:", err);
+        setIsLoaded(true);
+      });
   }, []);
 
   useEffect(() => {
     localStorage.setItem(storageKeys.content, JSON.stringify(siteContent));
-    if (storageEnabled) saveSiteState("siteContent", siteContent);
-  }, [siteContent]);
+    if (storageEnabled && isLoaded) saveSiteState("siteContent", siteContent);
+  }, [siteContent, isLoaded]);
 
   useEffect(() => {
     localStorage.setItem(storageKeys.team, JSON.stringify(teamMembers));
-    if (storageEnabled) saveSiteState("teamMembers", teamMembers);
-  }, [teamMembers]);
+    if (storageEnabled && isLoaded) saveSiteState("teamMembers", teamMembers);
+  }, [teamMembers, isLoaded]);
 
   useEffect(() => {
     localStorage.setItem("clinformatiq_web_directors", JSON.stringify(directors));
-    if (storageEnabled) saveSiteState("directors", directors);
-  }, [directors]);
+    if (storageEnabled && isLoaded) saveSiteState("directors", directors);
+  }, [directors, isLoaded]);
 
   useEffect(() => {
     localStorage.setItem(storageKeys.careers, JSON.stringify(careerListings));
-    if (storageEnabled) saveSiteState("careerListings", careerListings);
-  }, [careerListings]);
+    if (storageEnabled && isLoaded) saveSiteState("careerListings", careerListings);
+  }, [careerListings, isLoaded]);
 
   useEffect(() => {
     localStorage.setItem(storageKeys.documents, JSON.stringify(documents));
-    if (storageEnabled) saveSiteState("documents", documents);
-  }, [documents]);
+    if (storageEnabled && isLoaded) saveSiteState("documents", documents);
+  }, [documents, isLoaded]);
 
   useEffect(() => {
     localStorage.setItem(storageKeys.affiliated, JSON.stringify(affiliatedInstitutes));
-    if (storageEnabled) saveSiteState("affiliatedInstitutes", affiliatedInstitutes);
-  }, [affiliatedInstitutes]);
+    if (storageEnabled && isLoaded) saveSiteState("affiliatedInstitutes", affiliatedInstitutes);
+  }, [affiliatedInstitutes, isLoaded]);
 
   useEffect(() => {
     localStorage.setItem("clinformatiq_web_certificates", JSON.stringify(certificates));
-    if (storageEnabled) saveSiteState("certificates", certificates);
-  }, [certificates]);
+    if (storageEnabled && isLoaded) saveSiteState("certificates", certificates);
+  }, [certificates, isLoaded]);
 
   useEffect(() => {
     localStorage.setItem(storageKeys.students, JSON.stringify(students));
