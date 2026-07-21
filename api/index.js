@@ -62,6 +62,25 @@ async function initDb() {
         );
       `);
       console.log("✓ PostgreSQL tables initialized successfully.");
+
+      // Automatically seed initial site dataset if table is empty or FORCE_SEED=true
+      const { rows } = await client.query("SELECT COUNT(*) FROM site_state");
+      const isEmpty = parseInt(rows[0].count, 10) === 0;
+      const forceSeed = process.env.FORCE_SEED === "true";
+
+      if (isEmpty || forceSeed) {
+        const seedPath = path.resolve(__dirname, "../initial_seed.json");
+        if (fs.existsSync(seedPath)) {
+          const seedData = fs.readFileSync(seedPath, "utf-8");
+          await client.query(
+            `INSERT INTO site_state (id, data, updated_at) 
+             VALUES (1, $1, CURRENT_TIMESTAMP)
+             ON CONFLICT (id) DO UPDATE SET data = $1, updated_at = CURRENT_TIMESTAMP`,
+            [seedData]
+          );
+          console.log("✓ PostgreSQL initial dataset seeded successfully.");
+        }
+      }
     } finally {
       client.release();
     }
@@ -70,7 +89,7 @@ async function initDb() {
   }
 }
 
-// Initialize tables
+// Initialize tables & seed
 initDb();
 
 // Multer memory storage configuration for file uploads
@@ -112,6 +131,28 @@ app.post("/api/state", async (req, res) => {
   } catch (err) {
     console.error("Error saving state:", err.message);
     res.status(500).json({ error: "Failed to save site state to database" });
+  }
+});
+
+// Seed endpoint to re-apply initial dataset on demand
+app.post("/api/seed", async (req, res) => {
+  try {
+    const seedPath = path.resolve(__dirname, "../initial_seed.json");
+    if (!fs.existsSync(seedPath)) {
+      return res.status(404).json({ error: "initial_seed.json file not found" });
+    }
+    const seedData = fs.readFileSync(seedPath, "utf-8");
+    await pool.query(
+      `INSERT INTO site_state (id, data, updated_at) 
+       VALUES (1, $1, CURRENT_TIMESTAMP) 
+       ON CONFLICT (id) 
+       DO UPDATE SET data = $1, updated_at = CURRENT_TIMESTAMP`,
+      [seedData]
+    );
+    res.json({ success: true, message: "Initial database seed applied successfully." });
+  } catch (err) {
+    console.error("Error seeding state:", err.message);
+    res.status(500).json({ error: "Failed to seed database" });
   }
 });
 

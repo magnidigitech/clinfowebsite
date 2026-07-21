@@ -1,0 +1,530 @@
+{
+  "siteContent": {
+    "heroVideoId": "https://youtu.be/0OFv6AfUPlA",
+    "footerYoutube": "https://www.youtube.com/@clinformatiq",
+    "footerInstagram": "https://www.instagram.com/clinformatiq",
+    "footerFacebook": "https://www.facebook.com/clinformatiq",
+    "whatsappNumber": "+919010855577",
+    "footerAddress": "Address: 5th Floor D, No.1-6-2, Maruthi Nagar, Guntur, Andhra Pradesh 522006",
+    "academicFocusTitle": "Academic Focus ",
+    "academicFocusSubtitle": "Professional training standards optimized for biotechnology, pharmaceuticals, and software validation pipelines.",
+    "hero": {
+      "tag": "Clinical Analytics Curriculum",
+      "title": "Launch Your Clinical Career",
+      "subtitle": "Accelerate your clinical learning path. Learn directly from field practitioners using curriculum models backed by global compliance mandates and clinical software workflows.",
+      "cta1Text": "Start Your Journey",
+      "cta2Text": "Schedule Consultation"
+    },
+    "videos": [
+      {
+        "id": "gcp",
+        "label": "SAS  Demo",
+        "title": "SAS",
+        "meta": "Do watch SAS Demo class",
+        "videoId": "https://youtu.be/iLcX-soGPK0"
+      },
+      {
+        "id": "video_1781341303736",
+        "label": "Pharmacovigilance  Demo",
+        "title": "PV Demo",
+        "meta": "Do watch PV Demo",
+        "videoId": "https://youtu.be/L7LjOaP7ibE"
+      },
+      {
+        "id": "video_1781341357058",
+        "label": "CDM Demo",
+        "title": "CDM ",
+        "meta": "Do Watch CDM Demo",
+        "videoId": "https://youtu.be/2ed2j7DjAGU"
+      }
+    ],
+    "metrics": [
+      {
+        "value": "5,000+",
+        "label": "Trained Professionals"
+      },
+      {
+        "value": "98%",
+        "label": "Career Transition Rate"
+      },
+      {
+        "value": "150+",
+        "label": "Active Global Hiring Partners"
+      },
+      {
+        "value": "12+",
+        "label": "Specialized Learning Modules"
+      }
+    ],
+    "features": [
+      {
+        "title": "Unsure about your career? I found Clinformatiq",
+        "description": "Based on current market trends and individual career aspirations, Clinformatiq's expert counsellors collaborate with students to identify and select the most suitable courses within the healthcare and clinical research domain."
+      },
+      {
+        "title": "Hey, I am Industry-Ready",
+        "description": "Students will receive comprehensive, hands-on practical training specifically designed to equip them with real-world skills. This training uses actual testcase scenarios and workflows, enabling students to gain direct exposure to healthcare tools."
+      },
+      {
+        "title": "Polishing My Resume",
+        "description": "Clinformatiq's expert counsellors are helping me build a strong, industry-focused resume that showcases my training in clinical and healthcare domains."
+      },
+      {
+        "title": "Mock Today, Rock Tomorrow",
+        "description": "Clinformatiq prepares students for real-world job interviews through structured mock interview sessions and focused communication skill development, using curated question banks tailored to the healthcare and clinical research industry."
+      },
+      {
+        "title": "Trained, Tested, Hired!",
+        "description": "With the right guidance and skill development, I successfully secured a role aligned with my career goals in the healthcare industry."
+      }
+    ],
+    "courses": [
+      {
+        "id": "cr",
+        "name": "Clinical Research",
+        "duration": "<b>1 month</b>",
+        "skills": "<b>Clinical Trials, Protocol Design, GCP, ICH Guidelines</b>",
+        "body": "<b>A detailed introduction covering clinical trials planning, protocol design, ethics committee approvals, and international GCP and ICH regulations.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Clinical_Research_1781769421255.pdf",
+        "pdfFileName": "Clinical_Research_1781769421255.pdf"
+      },
+      {
+        "id": "cdm",
+        "name": "Clinical Data Management",
+        "duration": "<b>1 month</b>",
+        "skills": "<b>CRF Design, EDC Systems, Query Management, CDISC Standards</b>",
+        "body": "<b>Focuses on verifying clinical database design, EDC setups, edit check scripts, CRF formatting, database locks, and audit-ready filing.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Clinical_Data_Management_1781340935446.pdf",
+        "pdfFileName": "Clinical_Data_Management_1781340935446.pdf"
+      },
+      {
+        "id": "pv",
+        "name": "Pharmacovigilance",
+        "duration": "<b>1 month</b>",
+        "skills": "<b>Drug Safety Monitoring, MedDRA Coding, Case Processing, Signal Detection</b>",
+        "body": "<b>Covers post-marketing safety checks, adverse event reporting, MedDRA dictionary encoding, case narratives, and clinical signal detection.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Pharmacovigilance_1781768580109.pdf",
+        "pdfFileName": "Pharmacovigilance_1781768580109.pdf"
+      },
+      {
+        "id": "mc",
+        "name": "Medical Coding",
+        "duration": "<b>1 month</b>",
+        "skills": "<b>ICD-10, CPT, HCPCS Coding, Claims Review</b>",
+        "body": "<b>Learn healthcare terminology codes to classify diagnoses, physician procedures, medical treatments, and clinical bills.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Medical_Coding_1781769091913.pdf",
+        "pdfFileName": "Medical_Coding_1781769091913.pdf"
+      },
+      {
+        "id": "ra",
+        "name": "Regulatory Affairs",
+        "duration": "<b>1 month</b>",
+        "skills": "<b>Regulatory Submissions, IND/NDA, Compliance, FDA/EMA Guidelines</b>",
+        "body": "<b>Covers global dossier submissions for marketing approvals, FDA/EMA guidelines, eCTD setups, and medical labels.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Regulatory_Affairs_1781768739479.pdf",
+        "pdfFileName": "Regulatory_Affairs_1781768739479.pdf"
+      },
+      {
+        "id": "cs",
+        "name": "Clinical SAS",
+        "duration": "<b>3 months</b>",
+        "skills": "<b>SAS Programming, Data Cleaning, TFLs, CDISC (SDTM/ADaM)</b>",
+        "body": "<b>Professional analytics using SAS programming tools, dataset modifications, TFL generation, and CDISC standards.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Clinical_SAS_1781340953828.pdf",
+        "pdfFileName": "Clinical_SAS_1781340953828.pdf"
+      },
+      {
+        "id": "rp",
+        "name": "R Programming",
+        "duration": "<b>3 months</b>",
+        "skills": "<b>Data Visualization, Statistical Modeling &amp; Computing</b>",
+        "body": "<b>Modern biostatistical computing, graph formatting, ggplot2 packages, and statistical model assessments for clinical researchers.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/R_Programming_1781769693736.pdf",
+        "pdfFileName": "R_Programming_1781769693736.pdf"
+      },
+      {
+        "id": "pb",
+        "name": "Power BI",
+        "duration": "<b>2 months</b>",
+        "skills": "<b>DAX Formulas, Interactive Dashboards, Data Modeling, Report Automation</b>",
+        "body": "<b>A hands-on pathway teaching interactive reports, clinical dashboards, safety metrics automation, and DAX data modeling.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Power_BI_1781770008680.pdf",
+        "pdfFileName": "Power_BI_1781770008680.pdf"
+      },
+      {
+        "id": "qa",
+        "name": "Data Validation / QC / QA",
+        "duration": "<b>1 month</b>",
+        "skills": "<b>Source Verification, Quality Audits, SOP Compliance, GxP Data Integrity</b>",
+        "body": "<b>Focuses on verifying clinical data quality, regulatory compliance, and process consistency through audits and SOP compliance checks.</b>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Data_Validation___QC___QA_1781770109682.pdf",
+        "pdfFileName": "Data_Validation___QC___QA_1781770109682.pdf"
+      },
+      {
+        "id": "1782454957086",
+        "name": "Pharmacy Benefit Manager(PBM)",
+        "duration": "<p data-start=\"394\" data-end=\"698\" class=\"PDq2pG_selectionAnchorContainer\"><b>1 Month</b></p>",
+        "skills": "<p class=\"p1\" style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-alternates: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-variant-emoji: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-stretch: normal; font-size: 13px; line-height: normal; font-family: &quot;Helvetica Neue&quot;;\"><b><font color=\"#474747\">PBM Fundamentals, Benefit Plans, Claims Processing, Prior Authorization, Drug Coverage &amp; Compliance.</font></b></p>",
+        "body": "<p data-start=\"394\" data-end=\"698\" class=\"PDq2pG_selectionAnchorContainer\"><b>The <span data-start=\"96\" data-end=\"150\">Pharmacy Benefit Management (PBM) Training Program</span> at <span data-start=\"154\" data-end=\"180\">Clinformatiq Institute</span> provides comprehensive knowledge of pharmacy benefit processes, claims management, prior authorization, and regulatory compliance. Gain practical skills through industry focused training to prepare for careers in PBM, health insurance, and healthcare operations</b>.</p>",
+        "pdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/course-pdfs/Pharmacy_Benefit_Manager_PBM__1782535959525.pdf",
+        "pdfFileName": "Pharmacy_Benefit_Manager_PBM__1782535959525.pdf"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "The R and SAS cohorts gave me the exact data cleaning and SDTM mapping skills CROs require.",
+        "author": "Priya Sharma",
+        "role": "Clinical Data Analyst, IQVIA"
+      },
+      {
+        "quote": "The hands-on sandbox labs made all the difference. I processed real safety cases under global audit workflows.",
+        "author": "Rajesh Varma",
+        "role": "Safety Specialist, Cognizant"
+      },
+      {
+        "quote": "Learning EDC setup and query workflow directly from an active trial lead helped me through technical interviews.",
+        "author": "Dr. Anjali Mehta",
+        "role": "Associate CDM Lead, Novartis"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What background is required for Clinical SAS?",
+        "answer": "Life Sciences, Biotechnology, Pharmacy, Medicine, or Statistics backgrounds are ideal. The curriculum starts from foundations and scales to SDTM/ADaM workflows."
+      },
+      {
+        "question": "Are your cohorts live or self-paced?",
+        "answer": "Cohorts are led live by active industry practitioners with interactive lectures, sandbox labs, and portfolio support."
+      },
+      {
+        "question": "How does placement referral work?",
+        "answer": "Graduates who pass GxP competency evaluations are referred to hiring partners with portfolio evaluations."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Launch Your Career?",
+      "description": "Be among the first to join our innovative clinical training programs and shape the future of healthcare technology."
+    }
+  },
+  "careerListings": [],
+  "teamMembers": [
+    {
+      "id": "1781779239967",
+      "name": "Venkata Mukkapati",
+      "designation": "Regulatory Affairs Specialist",
+      "description": "<strong data-start=\"1417\" data-end=\"1438\">Venkata Mukkapati</strong> is a Regulatory Affairs professional with <strong data-start=\"1481\" data-end=\"1508\">20+ years of experience</strong> in global regulatory affairs, specializing in <strong data-start=\"1555\" data-end=\"1580\">US FDA, EMA, and MHRA</strong> regulations. His expertise includes <strong data-start=\"1617\" data-end=\"1733\">dossier submissions, eCTD publishing, labeling compliance, regulatory strategy, and global product registrations</strong>. At Clinformatiq, he shares his extensive industry knowledge to help develop the next generation of Regulatory Affairs professionals.",
+      "photo": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/team_photos/1781779234161_image.jpg",
+      "linkedin": "https://www.linkedin.com/in/venkata-mukkapati-4923ba8/",
+      "position": 1
+    },
+    {
+      "id": "1781779560865",
+      "name": "Balaji Lanka",
+      "designation": "Strategic Advisor",
+      "description": "<div class=\"qMYqUG_convSearchResultHighlightRoot\"><div class=\"\" data-turn-id-container=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-10\" data-is-intersecting=\"true\"><section class=\"text-token-text-primary w-full focus:outline-none has-data-writing-block:pointer-events-none [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto R6Vx5W_threadScrollVars scroll-mb-[calc(var(--scroll-root-safe-area-inset-bottom,0px)+var(--thread-response-height))] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]\" dir=\"auto\" data-turn-id=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-10\" data-turn-id-container=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-10\" data-testid=\"conversation-turn-22\" data-turn=\"assistant\"><div class=\"text-base my-auto mx-auto pb-10 [--thread-content-margin:var(--thread-content-margin-xs,calc(var(--spacing)*4))] @w-sm/main:[--thread-content-margin:var(--thread-content-margin-sm,calc(var(--spacing)*6))] @w-lg/main:[--thread-content-margin:var(--thread-content-margin-lg,calc(var(--spacing)*16))] px-(--thread-content-margin)\"><div data-conversation-screenshot-content=\"\" class=\"[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn\"><div class=\"flex max-w-full flex-col gap-4 grow\"><div data-message-author-role=\"assistant\" data-message-id=\"2353f2a3-b057-49bc-b41b-2a57815dfc3c\" dir=\"auto\" data-message-model-slug=\"gpt-5-5\" class=\"min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal outline-none keyboard-focused:focus-ring [.text-message+&amp;]:mt-1\" data-turn-start-message=\"true\" tabindex=\"0\"><div class=\"flex w-full flex-col gap-1 empty:hidden\"><div class=\"markdown prose dark:prose-invert wrap-break-word w-full light markdown-new-styling\"><p data-start=\"1209\" data-end=\"1599\" data-is-last-node=\"\" data-is-only-node=\"\"><strong data-start=\"1209\" data-end=\"1225\">Balaji Lanka</strong> is a technology entrepreneur and business leader with <strong data-start=\"1280\" data-end=\"1307\">30+ years of experience</strong> in IT, healthcare innovation, and strategic leadership. As the <strong data-start=\"1371\" data-end=\"1405\">Founder &amp; CEO of Rijuven India</strong> and <strong data-start=\"1410\" data-end=\"1454\">President of Infoyuga Technologies, Inc.</strong>, he is committed to leveraging technology to improve healthcare accessibility and create sustainable social impact through innovative solutions.</p></div></div></div></div><div class=\"z-0 flex min-h-[46px] justify-start\"></div><div class=\"mt-3 w-full empty:hidden\"><div class=\"text-center\"></div></div></div></div></section></div></div><div aria-hidden=\"true\" class=\"pointer-events-none -mt-px h-px translate-y-[calc(var(--scroll-root-safe-area-inset-bottom)-14*var(--spacing))]\"></div>",
+      "photo": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/team_photos/1781779553072_image__1_.jpg",
+      "linkedin": "",
+      "position": 2
+    },
+    {
+      "id": "1781781541324",
+      "name": "Ramesh Nalabothu",
+      "designation": "Director",
+      "description": "<strong data-start=\"1339\" data-end=\"1359\">Ramesh Nalabothu</strong> is the <strong data-start=\"1367\" data-end=\"1379\">Director</strong> at Clinformatiq. Based in <strong data-start=\"1406\" data-end=\"1425\">Calgary, Canada</strong>, he holds a background in <strong data-start=\"1452\" data-end=\"1478\">Pharmaceutical Science</strong> and brings valuable experience in strategic partnerships, business development, and educational initiatives. He is dedicated to advancing industry focused learning and creating career opportunities for aspiring life sciences professionals.",
+      "photo": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/team_photos/1781781528500_WhatsApp_Image_2026-06-18_at_16.43.14.jpeg",
+      "linkedin": "https://www.linkedin.com/in/ramesh-nalabothu-95826a1bb/",
+      "position": 3
+    },
+    {
+      "id": "1781777563855",
+      "name": "Bharath Sai Srinivas",
+      "designation": "Director",
+      "description": "<div class=\"qMYqUG_convSearchResultHighlightRoot\"><div class=\"\" data-turn-id-container=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-4\" data-is-intersecting=\"true\"><section class=\"text-token-text-primary w-full focus:outline-none has-data-writing-block:pointer-events-none [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto R6Vx5W_threadScrollVars scroll-mb-[calc(var(--scroll-root-safe-area-inset-bottom,0px)+var(--thread-response-height))] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]\" dir=\"auto\" data-turn-id=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-4\" data-turn-id-container=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-4\" data-testid=\"conversation-turn-10\" data-turn=\"assistant\"><div class=\"text-base my-auto mx-auto pb-10 [--thread-content-margin:var(--thread-content-margin-xs,calc(var(--spacing)*4))] @w-sm/main:[--thread-content-margin:var(--thread-content-margin-sm,calc(var(--spacing)*6))] @w-lg/main:[--thread-content-margin:var(--thread-content-margin-lg,calc(var(--spacing)*16))] px-(--thread-content-margin)\"><div data-conversation-screenshot-content=\"\" class=\"[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn\"><div class=\"flex max-w-full flex-col gap-4 grow\"><div data-message-author-role=\"assistant\" data-message-id=\"5e826606-eb3b-4f98-a13e-6ae38aed2fec\" dir=\"auto\" data-message-model-slug=\"gpt-5-5\" class=\"min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal outline-none keyboard-focused:focus-ring [.text-message+&amp;]:mt-1\" data-turn-start-message=\"true\" tabindex=\"0\"><div class=\"flex w-full flex-col gap-1 empty:hidden\"><div class=\"markdown prose dark:prose-invert wrap-break-word w-full light markdown-new-styling\"><p data-start=\"1140\" data-end=\"1523\" data-is-last-node=\"\" data-is-only-node=\"\"><strong data-start=\"1140\" data-end=\"1174\">Bharath Sai Srinivas Avirineni</strong> is the Director at Clinformatiq and a Canada-based Clinical Data Management professional with <strong data-start=\"1269\" data-end=\"1295\">5+ years of experience</strong> in Clinical Data Management and Clinical Research. He leads strategic initiatives, industry partnerships, and training programs, helping students develop industry ready skills for successful careers in the life sciences sector.</p></div></div></div></div><div class=\"z-0 flex min-h-[46px] justify-start\"></div><div class=\"mt-3 w-full empty:hidden\"><div class=\"text-center\"></div></div></div></div></section></div></div><div aria-hidden=\"true\" class=\"pointer-events-none -mt-px h-px translate-y-[calc(var(--scroll-root-safe-area-inset-bottom)-14*var(--spacing))]\"></div>",
+      "photo": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/team_photos/1781777300335_8ec74b34-5ae2-4304-b08c-d298a8b3566e_FE818931-77EF-4E9E-88DF-1A4A48A8DBFC.jpeg",
+      "linkedin": "www.linkedin.com/in/bharath-sai-srinivas-avirineni-a6498227a",
+      "position": 4
+    },
+    {
+      "id": "1781778331547",
+      "name": "Dr.Abhishikth Katragadda",
+      "designation": "Head of Operations",
+      "description": "<div class=\"text-base my-auto mx-auto [--thread-content-margin:var(--thread-content-margin-xs,calc(var(--spacing)*4))] @w-sm/main:[--thread-content-margin:var(--thread-content-margin-sm,calc(var(--spacing)*6))] @w-lg/main:[--thread-content-margin:var(--thread-content-margin-lg,calc(var(--spacing)*16))] px-(--thread-content-margin)\"><div data-conversation-screenshot-content=\"\" class=\"[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn\"><div class=\"flex max-w-full flex-col gap-4 grow\"><div data-message-author-role=\"assistant\" data-message-id=\"5062ec39-923e-4206-b6ff-d16f56c7c9fe\" dir=\"auto\" data-message-model-slug=\"gpt-5-5\" class=\"min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal outline-none keyboard-focused:focus-ring [.text-message+&amp;]:mt-1\"><div class=\"flex w-full flex-col gap-1 empty:hidden\"><div class=\"markdown prose dark:prose-invert wrap-break-word w-full light markdown-new-styling\"><p data-start=\"1248\" data-end=\"1656\" data-is-last-node=\"\" data-is-only-node=\"\"><strong data-start=\"1248\" data-end=\"1277\">Dr. Abhishikth Katragadda</strong> is the <strong data-start=\"1285\" data-end=\"1307\">Head of Operations</strong> at Clinformatiq, holding an <strong data-start=\"1336\" data-end=\"1380\">M.Sc. in Clinical Pharmacy Practice (UK)</strong>. With experience in clinical research and hands on expertise in <strong data-start=\"1445\" data-end=\"1453\">CTMS</strong> and <strong data-start=\"1458\" data-end=\"1499\">Veeva Vault</strong>, he leads operational initiatives and training programs that prepare students for successful careers in the pharmaceutical and clinical research industries.</p></div></div></div></div><div class=\"z-0 flex min-h-[46px] justify-start\"></div></div></div>",
+      "photo": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/team_photos/1781785444133_DSC09351-Photoroom.jpg",
+      "linkedin": "",
+      "position": 5
+    }
+  ],
+  "jobApplications": [],
+  "documents": [],
+  "affiliatedInstitutes": [
+    {
+      "id": "1781341235595",
+      "name": "Chalapathi Institute of Pharmaceutical",
+      "city": "Guntur, AP.",
+      "description": "<p data-start=\"201\" data-end=\"796\"><strong data-start=\"201\" data-end=\"436\">Clinformatiq is proud to announce its official collaboration and Memorandum of Understanding (MoU) with <span class=\"hover:entity-accent entity-underline inline cursor-pointer align-baseline\"><span class=\"whitespace-normal\">Chalapathi Institute of Pharmaceutical Sciences (CLPT)</span></span>, one of the leading pharmaceutical education and research institutions in Andhra Pradesh.</strong> This strategic partnership aims to bridge the gap between academic learning and industry requirements by providing students with practical exposure, industry-oriented training, research opportunities, internships, and skill development programs in pharmaceutical sciences, clinical research, pharmacovigilance, regulatory affairs, and healthcare technologies.</p>\n<p data-start=\"798\" data-end=\"1233\">Through this collaboration, Clinformatiq and CLPT will work together to enhance student employability, promote innovation, facilitate knowledge exchange, and create opportunities for collaborative research projects. The partnership reflects a shared commitment to developing highly skilled pharmaceutical professionals who can contribute effectively to the healthcare and life sciences industries.</p>",
+      "photo": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/affiliated_photos/1781341048809_Screenshot_2026-06-13_142713.png",
+      "mouPdfUrl": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/affiliated_mous/1781788311898_MOU.pdf",
+      "mouPdfName": "MOU.pdf"
+    },
+    {
+      "id": "1781780332537",
+      "name": "Narasaraopeta Institute of Pharmaceutical Sciences",
+      "city": "Narasaraopeta, A.P.",
+      "description": "<div class=\"qMYqUG_convSearchResultHighlightRoot\"><div class=\"\" data-turn-id-container=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-11\" data-is-intersecting=\"true\"><section class=\"text-token-text-primary w-full focus:outline-none has-data-writing-block:pointer-events-none [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto R6Vx5W_threadScrollVars scroll-mb-[calc(var(--scroll-root-safe-area-inset-bottom,0px)+var(--thread-response-height))] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]\" dir=\"auto\" data-turn-id=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-11\" data-turn-id-container=\"request-WEB:15389db3-16fe-4df3-93d4-edcf7d67339f-11\" data-testid=\"conversation-turn-24\" data-turn=\"assistant\"><div class=\"text-base my-auto mx-auto pb-10 [--thread-content-margin:var(--thread-content-margin-xs,calc(var(--spacing)*4))] @w-sm/main:[--thread-content-margin:var(--thread-content-margin-sm,calc(var(--spacing)*6))] @w-lg/main:[--thread-content-margin:var(--thread-content-margin-lg,calc(var(--spacing)*16))] px-(--thread-content-margin)\"><div data-conversation-screenshot-content=\"\" class=\"[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn\"><div class=\"flex max-w-full flex-col gap-4 grow\"><div data-message-author-role=\"assistant\" data-message-id=\"6478a2ee-d6e7-45b2-b8c0-9d1ca87b1b5d\" data-turn-start-message=\"true\" dir=\"auto\" tabindex=\"0\" data-message-model-slug=\"gpt-5-5\" class=\"min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal outline-none keyboard-focused:focus-ring [.text-message+&amp;]:mt-1\"><div class=\"flex w-full flex-col gap-1 empty:hidden\"><div class=\"markdown prose dark:prose-invert wrap-break-word w-full light markdown-new-styling\"><p data-start=\"1518\" data-end=\"2009\" data-is-last-node=\"\" data-is-only-node=\"\"><strong data-start=\"1518\" data-end=\"1543\">Clinformatiq and NIPS</strong> have partnered through a strategic MoU to provide students with industry-focused training, skill development programs, expert sessions, internships, and career guidance in Clinical Research, Clinical Data Management, Pharmacovigilance, Regulatory Affairs, and related life sciences domains. Together, the collaboration aims to create industry-ready professionals equipped for the evolving healthcare and pharmaceutical sectors.&nbsp;<span class=\"\" data-state=\"closed\"></span></p></div></div></div></div><div class=\"z-0 flex min-h-[46px] justify-start\"></div><div class=\"mt-3 w-full empty:hidden\"><div class=\"text-center\"></div></div></div></div></section></div></div><div aria-hidden=\"true\" class=\"pointer-events-none -mt-px h-px translate-y-[calc(var(--scroll-root-safe-area-inset-bottom)-14*var(--spacing))]\"></div>",
+      "photo": "https://aeidiioojdtcmyhifpny.supabase.co/storage/v1/object/public/clinformatiq/affiliated_photos/1781780205919_withoutbg-nips.png",
+      "mouPdfUrl": "",
+      "mouPdfName": ""
+    }
+  ],
+  "directors": [],
+  "certificates": [
+    {
+      "Certificate Number": "CFT2507A011",
+      "Name": "Dr.Trupti Anup",
+      "Course": "CR+CDM",
+      "Date of Issue": "July",
+      "Date of issue": "July",
+      "Details": "July"
+    },
+    {
+      "Certificate Number": "CFT2507A012",
+      "Name": "K.Mounika",
+      "Course": "CR+CDM",
+      "Date of Issue": "July",
+      "Date of issue": "July",
+      "Details": "July"
+    },
+    {
+      "Certificate Number": "CFT2507A013",
+      "Name": "K.Vinod",
+      "Course": "CR+CDM",
+      "Date of Issue": "July",
+      "Date of issue": "July",
+      "Details": "July"
+    },
+    {
+      "Certificate Number": "CFT2508A014",
+      "Name": "Sanika Sarpotdar",
+      "Course": "CR+CDM",
+      "Date of Issue": "July",
+      "Date of issue": "July",
+      "Details": "July"
+    },
+    {
+      "Certificate Number": "CFT2508A015",
+      "Name": "Abhilash Rathore",
+      "Course": "CR+CDM",
+      "Date of Issue": "July",
+      "Date of issue": "July",
+      "Details": "July"
+    },
+    {
+      "Certificate Number": "CFT2509A016",
+      "Name": "Dr.Garima R Yadav",
+      "Course": "CR+CDM",
+      "Date of Issue": "July",
+      "Date of issue": "July",
+      "Details": "July"
+    },
+    {
+      "Certificate Number": "CFT2507A017",
+      "Name": "Rathod Sainath",
+      "Course": "CR+CDM",
+      "Date of Issue": "July",
+      "Date of issue": "July",
+      "Details": "July"
+    },
+    {
+      "Certificate Number": "CFT2507A018",
+      "Name": "D.Janvitha S Reddy",
+      "Course": "CR+CDM",
+      "Date of Issue": "July",
+      "Date of issue": "July",
+      "Details": "July"
+    },
+    {
+      "Certificate Number": "CFT2511A019",
+      "Name": "Sanjana Konada",
+      "Course": "CR+SAS",
+      "Date of Issue": "November",
+      "Date of issue": "November",
+      "Details": "November"
+    },
+    {
+      "Certificate Number": "CFT2512A020",
+      "Name": "Riddhi Rajesh Gada",
+      "Course": "CR+CDM",
+      "Date of Issue": "December",
+      "Date of issue": "December",
+      "Details": "December"
+    },
+    {
+      "Certificate Number": "CFT2512A021",
+      "Name": "Saranya K",
+      "Course": "CR+CDM",
+      "Date of Issue": "December",
+      "Date of issue": "December",
+      "Details": "December"
+    },
+    {
+      "Certificate Number": "CFT2512A022",
+      "Name": "KOTHAPALLI SUDHARSHAN",
+      "Course": "CR+CDM",
+      "Date of Issue": "December",
+      "Date of issue": "December",
+      "Details": "December"
+    },
+    {
+      "Certificate Number": "CFT2512A023",
+      "Name": "Rupa Naga Sree",
+      "Course": "CR+CDM",
+      "Date of Issue": "January",
+      "Date of issue": "January",
+      "Details": "January"
+    },
+    {
+      "Certificate Number": "CFT2601A024",
+      "Name": "Uma Sree",
+      "Course": "CR+CDM",
+      "Date of Issue": "February",
+      "Date of issue": "February",
+      "Details": "February"
+    },
+    {
+      "Certificate Number": "CFT2602A025",
+      "Name": "Nandeibam Ledia Devi",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "February",
+      "Date of issue": "February",
+      "Details": "February"
+    },
+    {
+      "Certificate Number": "CFT2604A026",
+      "Name": "Ruchitha K B",
+      "Course": "CR+CDM",
+      "Date of Issue": "April",
+      "Date of issue": "April",
+      "Details": "April"
+    },
+    {
+      "Certificate Number": "CFT2604A027",
+      "Name": "Yashaswini K",
+      "Course": "CR+CDM",
+      "Date of Issue": "April",
+      "Date of issue": "April",
+      "Details": "April"
+    },
+    {
+      "Certificate Number": "CFT2604A028",
+      "Name": "Navya Nelluri",
+      "Course": "CR+CDM",
+      "Date of Issue": "April",
+      "Date of issue": "April",
+      "Details": "April"
+    },
+    {
+      "Certificate Number": "CFT2604A029",
+      "Name": "Dr Sai praveen kumar kondareddy",
+      "Course": "CR+CDM",
+      "Date of Issue": "April",
+      "Date of issue": "April",
+      "Details": "April"
+    },
+    {
+      "Certificate Number": "CFT2605A030",
+      "Name": "SANDU PRAVALLIKA",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A031",
+      "Name": "Busi Divya Sri",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A032",
+      "Name": "Morla .padma sai sree",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A033",
+      "Name": "Kagga karuna",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A034",
+      "Name": "Jharika sri sravani Tammana",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A035",
+      "Name": "Urla Navya kala",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A036",
+      "Name": "Chethana H C",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A037",
+      "Name": "Vemula Swathi",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A038",
+      "Name": "SANGULA BLESSY",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A039",
+      "Name": "IRAPANI RAGAKSHARA",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A040",
+      "Name": "Kannekanti Guru Brahma Chari",
+      "Course": "CR+CDM+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    },
+    {
+      "Certificate Number": "CFT2605A041",
+      "Name": "Shilpa Jha",
+      "Course": "CR+PV",
+      "Date of Issue": "May",
+      "Date of issue": "May",
+      "Details": "May"
+    }
+  ]
+}
