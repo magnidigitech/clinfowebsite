@@ -5,7 +5,7 @@ export function SEO({
   description = "Prepare for clinical research, SAS programming, CDM, pharmacovigilance, medical coding, and regulatory affairs careers with Clinformatiq's expert-led industry training.",
   keywords = "Clinical Research, Clinical Data Management, Pharmacovigilance, Clinical SAS, Medical Coding, Regulatory Affairs, PBM, Clinformatiq",
   canonicalUrl = "https://www.clinformatiq.com",
-  ogImage = "https://www.clinformatiq.com/og-image.jpg"
+  ogImage = "https://www.clinformatiq.com/clinformatiq-logo.png"
 }) {
   useEffect(() => {
     // Update Document Title
