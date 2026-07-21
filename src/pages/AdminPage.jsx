@@ -553,7 +553,7 @@ function AdminDirectorsTab({ directors, setDirectors, showToast }) {
       showToast('Photo uploaded successfully!');
     } catch (err) {
       console.error(err);
-      alert('Upload failed. Make sure Supabase config is correct.');
+      alert(err.message || 'Upload failed. Make sure PostgreSQL database and server connection are working.');
     } finally {
       setUploading(false);
     }
@@ -674,7 +674,7 @@ function AdminTeamTab({ teamMembers, setTeamMembers, showToast }) {
       showToast('Photo uploaded successfully!');
     } catch (err) {
       console.error(err);
-      alert('Upload failed. Make sure Supabase config is correct.');
+      alert(err.message || 'Upload failed. Make sure PostgreSQL database and server connection are working.');
     } finally {
       setUploading(false);
     }
@@ -714,7 +714,7 @@ function AdminTeamTab({ teamMembers, setTeamMembers, showToast }) {
             ) : (
               <TextField label="Photo URL (Image link)" value={form.photo} onChange={photo => setForm({ ...form, photo })} />
             )}
-            {!storageEnabled && <p className="text-xs text-slate-500 mt-2">Supabase Storage not configured. You must use a direct image URL.</p>}
+            {!storageEnabled && <p className="text-xs text-slate-500 mt-2">Storage not configured. You must use a direct image URL.</p>}
           </div>
           <RichTextEditor label="Description / Bio" value={form.description} onChange={v => setForm({ ...form, description: v })} />
           <div className="flex justify-end gap-3 border-t border-slate-100 pt-4">
@@ -773,7 +773,7 @@ function AdminDocumentsTab({ documents, setDocuments, showToast }) {
       showToast("Document uploaded successfully!");
     } catch (err) {
       console.error(err);
-      alert("Upload failed. Make sure Supabase config is correct.");
+      alert(err.message || 'Upload failed. Make sure PostgreSQL database and server connection are working.');
     } finally {
       setUploading(false);
     }
@@ -796,7 +796,7 @@ function AdminDocumentsTab({ documents, setDocuments, showToast }) {
 
         <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm space-y-4">
           {!storageEnabled && (
-            <div className="alert-error mb-4">Supabase Storage is not configured. File uploads are disabled.</div>
+            <div className="alert-error mb-4">Storage is not configured. File uploads are disabled.</div>
           )}
           <TextField label="Document Title" value={title} onChange={setTitle} disabled={!storageEnabled || uploading} />
 
@@ -881,7 +881,7 @@ function AdminAffiliatedTab({ affiliatedInstitutes, setAffiliatedInstitutes, con
       showToast("Photo uploaded successfully!");
     } catch (err) {
       console.error(err);
-      alert("Upload failed. Make sure Supabase config is correct.");
+      alert(err.message || 'Upload failed. Make sure PostgreSQL database and server connection are working.');
     } finally {
       setUploading(false);
     }
@@ -901,7 +901,7 @@ function AdminAffiliatedTab({ affiliatedInstitutes, setAffiliatedInstitutes, con
       showToast("MOU PDF uploaded successfully!");
     } catch (err) {
       console.error(err);
-      alert("MOU upload failed. Make sure Supabase config is correct.");
+      alert(err.message || 'MOU upload failed. Make sure PostgreSQL database and server connection are working.');
     } finally {
       setUploadingMou(false);
       e.target.value = "";
@@ -923,7 +923,7 @@ function AdminAffiliatedTab({ affiliatedInstitutes, setAffiliatedInstitutes, con
       showToast("MOU PDF attached!");
     } catch (err) {
       console.error(err);
-      alert("MOU upload failed. Make sure Supabase config is correct.");
+      alert(err.message || 'MOU upload failed. Make sure PostgreSQL database and server connection are working.');
     } finally {
       setUploadingMouId(null);
     }
@@ -988,7 +988,7 @@ function AdminAffiliatedTab({ affiliatedInstitutes, setAffiliatedInstitutes, con
             ) : (
               <TextField label="Photo URL (Image link)" value={form.photo} onChange={photo => setForm({ ...form, photo })} />
             )}
-            {!storageEnabled && <p className="text-xs text-slate-500 mt-2">Supabase Storage not configured. You must use a direct image URL.</p>}
+            {!storageEnabled && <p className="text-xs text-slate-500 mt-2">Storage not configured. You must use a direct image URL.</p>}
           </div>
           <div className="rounded-lg border border-slate-200 p-4 bg-slate-50">
             <span className="form-label block mb-2">MOU PDF</span>
@@ -1317,7 +1317,7 @@ function AdminSettingsTab({ content, setContent, showToast }) {
       </div>
       <form onSubmit={save} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm space-y-5">
         <div className={`rounded-lg border px-4 py-3 text-sm font-semibold ${storageEnabled ? "border-emerald-200 bg-emerald-50 text-emerald-700" : "border-amber-200 bg-amber-50 text-amber-700"}`}>
-          Supabase database: {storageEnabled ? "Connected from environment settings" : "Not configured yet. Using browser storage until .env is added."}
+          PostgreSQL database: {storageEnabled ? "Connected via Express API backend" : "Not configured yet. Using browser storage until DATABASE_URL is added."}
         </div>
         <TextField label="Background Hero Video YouTube ID or URL" value={content.heroVideoId || ""} onChange={heroVideoId => setContent({ ...content, heroVideoId })} required />
         <TextField label="Footer YouTube Channel URL" value={content.footerYoutube || ""} onChange={footerYoutube => setContent({ ...content, footerYoutube })} />

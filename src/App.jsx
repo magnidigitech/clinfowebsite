@@ -73,7 +73,7 @@ export function App() {
         if (data.affiliatedInstitutes) setAffiliatedInstitutes(data.affiliatedInstitutes);
         if (data.certificates) setCertificates(data.certificates);
       })
-      .catch((err) => console.error("Error loading state from Supabase:", err));
+      .catch((err) => console.error("Error loading state from PostgreSQL:", err));
   }, []);
 
   useEffect(() => {
