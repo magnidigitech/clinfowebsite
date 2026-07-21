@@ -140,8 +140,8 @@ app.post("/api/state", async (req, res) => {
   }
 });
 
-// Seed endpoint to re-apply initial dataset on demand
-app.post("/api/seed", async (req, res) => {
+// Seed endpoint to re-apply initial dataset on demand (accepts GET and POST)
+app.all("/api/seed", async (req, res) => {
   try {
     const seedPath = path.resolve(__dirname, "../initial_seed.json");
     if (!fs.existsSync(seedPath)) {
