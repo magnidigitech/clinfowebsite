@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BadgeCheck, ShieldCheck, X } from "lucide-react";
+import { SEO } from "../components/SEO";
 
 export function VerifyCertificatePage({ certificates }) {
   const [certNumber, setCertNumber] = useState("");
@@ -19,6 +20,11 @@ export function VerifyCertificatePage({ certificates }) {
 
   return (
     <div className="fade-up mx-auto w-full max-w-3xl py-2">
+      <SEO
+        title="Verify Certificate Authenticity | Clinformatiq"
+        description="Verify the official authenticity and GxP training records of a Clinformatiq clinical program certificate holder."
+        canonicalUrl="https://www.clinformatiq.com/certificate"
+      />
       <div className="text-center mb-3">
         <h1 className="text-2xl md:text-3xl font-extrabold text-slate-900">Certificate Verification</h1>
         <p className="mt-1 text-xs md:text-sm text-slate-500">Verify the authenticity of a Clinformatiq certificate.</p>

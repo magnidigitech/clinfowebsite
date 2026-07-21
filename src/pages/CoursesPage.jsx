@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { SectionHeader } from "../components/SectionHeader";
 import { RichTextDisplay } from "../components/RichTextDisplay";
+import { SEO } from "../components/SEO";
 
 export function CoursesPage({ content }) {
   return (
     <section className="fade-up">
+      <SEO
+        title="Clinical Research & Healthcare Courses | Clinformatiq Institute"
+        description="Explore specialized clinical training pathways in Clinical Research, Clinical Data Management (CDM), Pharmacovigilance, Clinical SAS, Medical Coding, PBM, and Regulatory Affairs."
+        canonicalUrl="https://www.clinformatiq.com/courses"
+      />
       <SectionHeader title="Our Curriculum Courses" subtitle="Study our specialized pathways prepared by clinical trials and bioinformatics leaders." />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {content.courses.map((course) => (

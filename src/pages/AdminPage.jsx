@@ -27,6 +27,7 @@ import { Logo } from "../components/Logo";
 import { TextField } from "../components/TextField";
 import { RichTextDisplay } from "../components/RichTextDisplay";
 import { RichTextEditor } from "../components/RichTextEditor";
+import { SEO } from "../components/SEO";
 
 function AdminFeaturesTab({ content, setContent, showToast }) {
   const features = content.features || [];
@@ -1380,6 +1381,7 @@ export function AdminPage({ adminUser, setAdminUser, teamMembers, setTeamMembers
 
   return (
     <div className="flex h-screen overflow-hidden bg-slate-100">
+      <SEO title="Admin Console | Clinformatiq" description="Clinformatiq Management Dashboard" canonicalUrl="https://www.clinformatiq.com/admin" />
       {sidebarOpen && <div className="fixed inset-0 z-30 bg-black/40 lg:hidden" onClick={() => setSidebarOpen(false)} />}
 
       <aside className={`fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-slate-200 bg-white transition-transform duration-300 lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}>

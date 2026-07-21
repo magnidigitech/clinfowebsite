@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { FormShell } from "../components/FormShell";
 import { TextField } from "../components/TextField";
 import { SuccessPanel } from "../components/SuccessPanel";
+import { SEO } from "../components/SEO";
 
 export function StudentRegistration({ siteContent, setStudents }) {
   const [searchParams] = useSearchParams();
@@ -58,6 +59,11 @@ export function StudentRegistration({ siteContent, setStudents }) {
 
   return (
     <FormShell title="Student Enrollment Form" subtitle="Replicating Tutor LMS student registration layout credentials">
+      <SEO
+        title="Student Registration & Course Enrollment | Clinformatiq"
+        description="Register for expert-led clinical research, SAS programming, pharmacovigilance, and CDM training cohorts at Clinformatiq Institute."
+        canonicalUrl="https://www.clinformatiq.com/student-reg"
+      />
       <form onSubmit={submit} className="panel grid gap-4 p-6 sm:p-8">
         {status?.type === "error" && <div className="alert-error">{status.text}</div>}
         <div className="grid gap-4 sm:grid-cols-2">

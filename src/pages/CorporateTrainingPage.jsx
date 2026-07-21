@@ -3,6 +3,7 @@ import { BarChart3, Building2, Check, GraduationCap, ShieldCheck } from "lucide-
 import { FormShell } from "../components/FormShell";
 import { TextField } from "../components/TextField";
 import { SuccessPanel } from "../components/SuccessPanel";
+import { SEO } from "../components/SEO";
 
 export function CorporateTrainingPage({ content }) {
   const [form, setForm] = useState({
@@ -131,6 +132,11 @@ export function CorporateTrainingPage({ content }) {
 
   return (
     <div className="fade-up flex flex-col gap-16 md:gap-24">
+      <SEO
+        title="Corporate Training & Skill Development | Clinformatiq"
+        description="Empower your clinical, pharmaceutical, and healthcare teams with custom hands-on corporate training programs in GCP, CDM, Pharmacovigilance, and Clinical SAS."
+        canonicalUrl="https://www.clinformatiq.com/corporate-training"
+      />
       {/* Why Choose Us */}
       <section className="flex flex-col gap-10">
         <div className="text-center max-w-2xl mx-auto flex flex-col gap-3">

@@ -3,6 +3,7 @@ import { Linkedin, X } from "lucide-react";
 import { SectionHeader } from "../components/SectionHeader";
 import { RichTextDisplay } from "../components/RichTextDisplay";
 import { formatExternalUrl } from "../components/RichTextEditor";
+import { SEO } from "../components/SEO";
 
 export function OurTeam({ teamMembers = [], directors = [], siteContent = {} }) {
   const [activeMember, setActiveMember] = useState(null);
@@ -14,6 +15,11 @@ export function OurTeam({ teamMembers = [], directors = [], siteContent = {} }) 
 
   return (
     <section className="fade-up">
+      <SEO
+        title="Our Leadership & Industry Mentors | Clinformatiq"
+        description="Meet the clinical experts, regulatory affairs specialists, and data management visionaries behind Clinformatiq Institute."
+        canonicalUrl="https://www.clinformatiq.com/team"
+      />
       <SectionHeader title="Our Team" subtitle="Meet the clinical experts and visionaries behind Clinformatiq." />
 
       {directors.length > 0 && (

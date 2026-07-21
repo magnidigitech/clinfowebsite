@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Eye, EyeOff, Lock } from "lucide-react";
 import { storageKeys } from "../data/defaultData";
 import { TextField } from "../components/TextField";
+import { SEO } from "../components/SEO";
 
 export function LoginPage({ setStudentUser, setAdminUser }) {
   const [visible, setVisible] = useState(false);
@@ -29,6 +30,11 @@ export function LoginPage({ setStudentUser, setAdminUser }) {
 
   return (
     <section className="fade-up mx-auto w-full max-w-md">
+      <SEO
+        title="LMS Portal Access & Login | Clinformatiq"
+        description="Sign in to access the Clinformatiq Student Dashboard or Admin Console."
+        canonicalUrl="https://www.clinformatiq.com/login"
+      />
       <form onSubmit={submit} className="panel grid gap-5 p-7">
         <div className="mx-auto grid size-16 place-items-center rounded-full bg-clin-blue/10 text-clin-blue"><Lock /></div>
         <div className="text-center">

@@ -14,6 +14,7 @@ import {
 import { defaultSiteContent, userReviews, getYoutubeId } from "../data/defaultData";
 import { SectionHeader } from "../components/SectionHeader";
 import { RichTextDisplay } from "../components/RichTextDisplay";
+import { SEO } from "../components/SEO";
 
 export function HomePage({ content }) {
   const videos = content.videos?.length ? content.videos : defaultSiteContent.videos;
@@ -25,7 +26,12 @@ export function HomePage({ content }) {
   const icons = [Globe2, MonitorCheck, Users, ShieldCheck, GraduationCap];
 
   return (
-    <div className="fade-up">
+    <div className="space-y-16">
+      <SEO
+        title="Clinformatiq | Premium Clinical Analytics, SAS & Life Sciences Training"
+        description="Accelerate your clinical learning path. Learn directly from field practitioners using curriculum models backed by global compliance mandates and clinical software workflows."
+        canonicalUrl="https://www.clinformatiq.com"
+      />
       <section className="relative grid items-center gap-10 overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/55 p-8 shadow-2xl shadow-teal-900/10 backdrop-blur md:p-14 lg:grid-cols-[1.05fr_.95fr]">
         <div className="relative">
           <h1 className="text-gradient text-5xl font-extrabold leading-tight drop-shadow-sm sm:text-7xl">{content.hero.title}</h1>

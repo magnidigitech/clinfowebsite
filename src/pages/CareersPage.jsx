@@ -4,6 +4,7 @@ import { defaultCareers } from "../data/defaultData";
 import { SectionHeader } from "../components/SectionHeader";
 import { RichTextDisplay } from "../components/RichTextDisplay";
 import { TextField } from "../components/TextField";
+import { SEO } from "../components/SEO";
 
 function ApplyModal({ role, onClose, setJobApplications }) {
   const [sent, setSent] = useState(false);
@@ -45,6 +46,11 @@ export function CareersPage({ setJobApplications, careerListings, siteContent })
 
   return (
     <section className="fade-up">
+      <SEO
+        title="Careers & Placement Opportunities | Clinformatiq"
+        description="Join the Clinformatiq team or explore job placement openings in Clinical Research, SAS programming, and Data Management."
+        canonicalUrl="https://www.clinformatiq.com/careers"
+      />
       <SectionHeader title="Join the Clinformatiq Team" subtitle="Grow your skills alongside leading global clinical software specialists and cohort trainers." />
       <div className="mb-8 flex flex-wrap justify-center gap-3">
         {[["all", "All Roles"], ...categories.map((category) => [category, category])].map(([key, label]) => (

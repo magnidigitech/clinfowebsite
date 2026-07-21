@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FileUp, X } from "lucide-react";
 import { SectionHeader } from "../components/SectionHeader";
 import { RichTextDisplay } from "../components/RichTextDisplay";
+import { SEO } from "../components/SEO";
 
 export function AffiliatedInstitutesPage({ affiliatedInstitutes, content }) {
   const [activeInstitute, setActiveInstitute] = useState(null);
@@ -9,6 +10,11 @@ export function AffiliatedInstitutesPage({ affiliatedInstitutes, content }) {
 
   return (
     <section className="fade-up">
+      <SEO
+        title="Affiliated Colleges & University MoUs | Clinformatiq"
+        description="Partners committed to advancing clinical education, pharmacovigilance, and CDM training through official Memorandum of Understanding (MoU) collaborations."
+        canonicalUrl="https://www.clinformatiq.com/affiliated-institutes"
+      />
       <SectionHeader title={content?.affiliatedTitle || "Our Affiliated Institutes"} subtitle={content?.affiliatedSubtitle || "Partners committed to advancing clinical education and training through Memorandum of Understanding (MOU) agreements."} />
 
       {institutes.length === 0 ? (

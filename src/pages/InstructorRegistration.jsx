@@ -3,6 +3,7 @@ import { FileUp } from "lucide-react";
 import { FormShell } from "../components/FormShell";
 import { TextField } from "../components/TextField";
 import { SuccessPanel } from "../components/SuccessPanel";
+import { SEO } from "../components/SEO";
 
 export function InstructorRegistration({ setTrainers }) {
   const [fileName, setFileName] = useState("");
@@ -19,6 +20,11 @@ export function InstructorRegistration({ setTrainers }) {
 
   return (
     <FormShell title="Become an Instructor" subtitle="Join Clinformatiq as a clinical cohort trainer or software mentor.">
+      <SEO
+        title="Instructor & Faculty Registration | Clinformatiq"
+        description="Join Clinformatiq as a clinical cohort trainer, SAS mentor, or pharmaceutical software instructor."
+        canonicalUrl="https://www.clinformatiq.com/instructor-reg"
+      />
       <form onSubmit={submit} className="panel grid gap-4 p-6 sm:p-8">
         <div className="grid gap-4 sm:grid-cols-2">
           <TextField label="Full Name" value={form.name} onChange={(name) => setForm({ ...form, name })} required />
